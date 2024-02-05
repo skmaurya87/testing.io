@@ -14,14 +14,28 @@ function toggleTheme() {
   }
 
 
-  const numberOfBlocks = 50;
-  for (let i = 1; i <= numberOfBlocks; i++) {
-    const blockId = `block${i}`;
-    console.log(blockId);
-    const myId = document.querySelector('.list')
-    myId.id=blockId
-  }
+  function showResult(listId) {
+    // Get references to the elements in the clicked list
+    const clickedList = document.getElementById(listId);
+    const image = clickedList.querySelector('img');
+    const heading = clickedList.querySelector('.productName');
+    const description = clickedList.querySelector('.description');
 
+    // Get the content from the clicked list
+    const imageUrl = image.src;
+    const headingText = heading.innerText;
+    const descriptionText = description.innerText;
+
+    // Set the content to the result div
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = `
+      <img class='object-cover rounded w-full h-96 md:h-auto md:w-[250px]' src="${imageUrl}" alt="${headingText}">
+      <div class='flex flex-col justify-between px-4 leading-normal'>
+      <div class='mb-2 mt-0 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>${headingText}</div>
+      <p class='mb-3 font-normal text-gray-700 dark:text-gray-400 text-sm leading-6'>${descriptionText}</p>
+      </div>
+    `;
+  }
 
 
   
