@@ -1,133 +1,369 @@
 <!DOCTYPE html>
-<html lang="en" class="dark" id="theme-toggle">
+<html lang="en"  id="theme-toggle">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RESEARCH SCIENTIFIC INDIA</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
-    <script>
-        function toggleTheme() {
-    // Get the <html> element
-    var htmlElement = document.getElementById("theme-toggle");
-
-    // Toggle the "dark" class on the <html> element
-    htmlElement.classList.toggle("dark");
-
-    // Check if the "dark" class is present after toggling
-    var isDarkMode = htmlElement.classList.contains("dark");
-
-    // Update the button text based on the theme
-    var themeButton = document.getElementById("themeButton");
-    themeButton.innerText = isDarkMode ? "Light" : "Dark";
-  }
-  </script>
-  <link rel="stylesheet" crossorigin href="/assets/index-DWN8qcUs.css">
+    <script src="script.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-IEapTD07.css">
 </head>
 <body class="h-[100vh] bg-white dark:bg-gray-800" >
-    <div class="antialiased bg-gray-100 dark:bg-gray-700">
-    <div class="w-full text-gray-700 bg-gray-100 dark:text-gray-200 dark:bg-gray-700">
-      <div class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-        <div class="flex flex-row items-center justify-between p-4">
-          <a href="#" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark:text-white focus:outline-none focus:shadow-outline">Flowtrail UI</a>
-          <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
-            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-              <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-              <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-            </svg>
-          </button>
-        </div>
-        <nav class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Blog</a>
-          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Portfolio</a>
-          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">About</a>
-          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Contact</a>
-
-          
-          <div class="relative">
-            <button id="moreButton" data-dropdown-toggle="moreMenu" class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-              <span>More</span>
-              <svg fill="currentColor" viewBox="0 0 20 20" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </button>
-            <div id="moreMenu" aria-labelledby="moreButton" class="absolute w-full md:max-w-screen-sm md:w-screen mt-2 origin-top-right">
-              <div class="px-2 pt-2 pb-4 bg-white rounded-md shadow-lg dark:bg-gray-700">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <a class="flex row items-start rounded-lg bg-transparent p-2 dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">
-                    <div class="bg-teal-500 text-white rounded-lg p-3">
-                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="md:h-6 md:w-6 h-4 w-4"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
-                    </div>
-                    <div class="ml-3">
-                      <p class="font-semibold">Appearance</p>
-                      <p class="text-sm">Easy customization</p>
-                    </div>
-                  </a>
-  
-                  <a class="flex row items-start rounded-lg bg-transparent p-2 dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">
-                    <div class="bg-teal-500 text-white rounded-lg p-3">
-                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="md:h-6 md:w-6 h-4 w-4"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
-                    </div>
-                    <div class="ml-3">
-                      <p class="font-semibold">Comments</p>
-                      <p class="text-sm">Check your latest comments</p>
-                    </div>
-                  </a>
-  
-                  <a class="flex row items-start rounded-lg bg-transparent p-2 dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">
-                    <div class="bg-teal-500 text-white rounded-lg p-3">
-                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="md:h-6 md:w-6 h-4 w-4"><path d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
-                    </div>
-                    <div class="ml-3">
-                      <p class="font-semibold">Analytics</p>
-                      <p class="text-sm">Take a look at your statistics</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <button id="themeButton" onclick="toggleTheme()" data-tooltip-target="default-modal-example-toggle-dark-mode-tooltip" type="button" data-toggle-dark="light" class="flex items-center py-1 px-3 mx-3 justify-center text-xs font-medium text-gray-700 bg-white border border-gray-200 rounded-lg toggle-dark-state-example hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 dark:bg-gray-800 focus:outline-none dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Dark</button>
-
-        </nav>
+  <nav class="bg-gray-100 border-gray-200 dark:bg-gray-700">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+      <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="/assets/logo-IUfBBmM2.svg" class="h-16 filter-none dark:filter dark:invert" alt="RESEARCH SCIENTIFIC INDIA" />
+      </a>
+      <div class="flex flex-wrap items-center">
+          <span class="max-sm:hidden text-2xl font-bold text-blue-600 dark:text-white">RESEARCH SCIENTIFIC INDIA</span>
+            <button id="themeButton" onclick="toggleTheme()" data-tooltip-target="default-modal-example-toggle-dark-mode-tooltip" type="button" data-toggle-dark="light" class="flex items-center px-4 py-2 mx-3 justify-center text-xs font-medium text-gray-700 bg-white border border-gray-200 rounded-lg toggle-dark-state-example hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 dark:bg-gray-800 focus:outline-none dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Dark</button>
+   
       </div>
     </div>
-  </div>
-
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"  class="text-gray-700 dark:text-gray-50 w-6">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21M4.5 10.5h6.75V15H4.5v-4.5ZM3.75 18h15A2.25 2.25 0 0 0 21 15.75v-6a2.25 2.25 0 0 0-2.25-2.25h-15A2.25 2.25 0 0 0 1.5 9.75v6A2.25 2.25 0 0 0 3.75 18Z" />
-    </svg>
+  </nav>
 
 
 
+  
 
-
-    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-      </svg>
-      </button>
-      
-      <!-- Dropdown menu -->
-      <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-          <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
-            </li>
-          </ul>
+<div id="default-carousel" class="relative w-full" data-carousel="slide">
+  <!-- Carousel wrapper -->
+  <div class="relative h-[150px] overflow-hidden sm:h-[260px] md:h-[340px] lg:h-[340px] xl:h-[620px]">
+       <!-- Item 1 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="/assets/banner1-N-L8E600.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
       </div>
-      
+      <!-- Item 2 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="/assets/banner2-84iVV6nq.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+      </div>
+      <!-- Item 3 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="/assets/banner3-ncRRRhk-.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+      </div>
+  </div>
+  <!-- Slider indicators -->
+  <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+  </div>
+  <!-- Slider controls -->
+  <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+          </svg>
+          <span class="sr-only">Previous</span>
+      </span>
+  </button>
+  <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+          </svg>
+          <span class="sr-only">Next</span>
+      </span>
+  </button>
+</div>
 
-      
+
+<!-- ===================product list start ======================== -->
+<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4" >
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6" id="products">
+  <div class="cardInner">
+        <img  src="/assets/product1-2f1ghwsE.jpg" alt="" class="rounded-t-lg" />
+
+    <div class="p-4">
+            <h5 class="productName">STUDENT POLARISING MICROSCOPE. </h5>
+        <div class="description">Equipped with a Bertrand lens that can be swung in and out polariFull wave 1 λ, Quarter wave 1/4 λ available for quantitative retardation measurement Magnification: 40-600X for observation Eyepiece: WF 10x &Nosepiece: Center able Quadruple Objective: Strain free Achromatic 4X/0.1,10X/0.25, 40X/0.65 Spring Illumination: Day Light Plano Concave Reflection Mirror. Intermediate Tube Built in removable Bertrand lens built in removable analyzer Analyzer 90° rotary dial; Minimum reading angle 0.1° Stage Circular Graduated stage; 1° increments and venire reading 0.1° Condenser Strain free NA 0.90 with iris diaphragm Polarizer Attachable to bottom of condenser.</div>
+        <button type="button"  class="read-more" onclick="updateContent()" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal">
+          Read more
+          <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+          </svg>
+      </button>
 
 
 
-    
+
+    </div>
+</div>
+  <div class="cardInner">
+    <a href="#">
+        <img class="rounded-t-lg" src="/assets/product2-dsuq_vxE.jpg" alt="" />
+    </a>
+    <div class="p-4">
+        <a href="#">
+            <h5 class="productName">Student Polarimeter</h5>
+        </a>
+        <div class="description"> corning glass tube is enclosed in a circular aluminium tube with top door for access & exclusion of external light. The circular scale is attached near to analyzer and a range of measurement is 0-360 degrees. Vernier movable on the scale enable reading of optical rotation to 60sec.It is used in medical, pharmaceutical and chemical research laboratories.</div>
+
+        <button type="button"  class="read-more" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" onclick="updateContent()">
+          Read more
+          <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+          </svg>
+      </button>
+
+    </div>
+</div>
+  <div class="cardInner">
+    <a href="#">
+        <img class="rounded-t-lg" src="/assets/product3-t8zkAieG.jpg" alt="" />
+    </a>
+    <div class="p-4">
+        <a href="#">
+            <h5 class="productName">Hot Air Oven 28 Litres</h5>
+        </a>
+        <div class="description">Hot Air Oven 28 Litres Aluminium Chamber (12x12x12 Inch) SUNLINE Temperature up to 200C. Heating elements are placed in ribs at the bottom and sides are built In L-Shape thermometer. Double-walled inside Aluminium and outside Mild steel Sheet Powder Coated with perforated adjustable 2 shelves, two indicators, Thermostat & Low Medium High Rotary switch. To works on 220/230 V AC controls Heating.</div>
+        <button type="button"  class="read-more" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal">
+          Read more
+          <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+          </svg>
+      </button>
+    </div>
+</div>
+
+  <div class="cardInner">
+    <a href="#">
+        <img class="rounded-t-lg" src="/assets/product4-YZZJDXlJ.jpg" alt="" />
+    </a>
+    <div class="p-4">
+        <a href="#">
+            <h5 class="productName">Binocular Microscope</h5>
+        </a>
+        <div class="description">A Rigid & Heavy stand for perfect stability with observation tube inclined at 45° and rotatable in 360° with perfectly centered quadruple ball bearing evolving nose piece, fixed stage 120 mm x 140 mm with co-axial precision mechanical stage for X & Y movement of slides, substage brightfield condenser N.A. 1.25 & Iris diaphragm with built-in swing out filter holder & up-down movement through rack & pinion, heavy rectangular sturdy base, with built in LED illumination. All the parts are pressure die-cast in special aluminium alloy ensuring extra strength for long working lifespan with special optics in a thermocol box
+       <br><br>
+          Total Magnification : 1500 X<br>
+          Eye- Pieces : W.F 10x (Paired)<br>
+          Objectives : 4x, 10x, 40x (S/L) & 100x (S/L) Oil Immersion</div>
+          <button type="button"  class="read-more" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal">
+            Read more
+            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+        </button>
+    </div>
+</div>
+
+  <div class="cardInner">
+    <a href="#">
+        <img class="rounded-t-lg" src="/assets/product5-yqI0f8tj.jpg" alt="" />
+    </a>
+    <div class="p-4">
+        <a href="#">
+            <h5 class="productName">Tool makers Microscope</h5>
+        </a>
+        <div class="description">Tool makers Microscope designed as per international standards and offers wide range of application which include dimensional, angle and contour measurements of miniature parts as well as inspection of mechanical surfaces, Erect Image, Observation Tube - Monocular inclined at 30˚. With X-Y movement on ball bearing slides. Having Micrometer (50mm dia) L.C. 0.01mm with 360 degree gounometer. Fixed magnification 30x having 15x WF eyepiece with 90 degree cross hair line for angle measurement, With 150 X150mm ROTARY bed for X-Y movement is traveling on ball bearing slides with travel upto 25 X 25 mm with Micrometer heads (50mm dia) least count of 0.01mm for length, width & depth measurement, Having both contour (6V/20W) lamp and two surface Flurosent lamps ) lamps Having both transmitted and incident light in wooden box</div>
+
+        <button type="button"  class="read-more" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal">
+          Read more
+          <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+          </svg>
+      </button>
+    </div>
+</div>
+
+  <div class="cardInner">
+    <a href="#">
+        <img class="rounded-t-lg" src="/assets/product6-GpovPZZ0.jpg" alt="" />
+    </a>
+    <div class="p-4">
+        <a href="#">
+            <h5 class="productName">Abbe Refractometer</h5>
+        </a>
+        <div class="description">Abbe Refractometer  designed for quick and convenient measurement of refractive index and also dispersion of liquids and solids. Scale Reading +.001 & +.00001 by estimation. The reading on the scale is to the third decimal place and can be estimated easily to the forth decimal place. Sugar Scale 0 to 95% (+ 0.5%) Dispension ND +0.0005. Packaging Contents : Standard Glass Test Plate, Small Bottle Contact Liquid, Thermometer in Metal Jacket, Styrofoam Molded box or Plywood Cabinet.</div>
+        <button type="button"  class="read-more" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal">
+          Read more
+          <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+          </svg>
+      </button>
+    </div>
+</div>
+
+  <div class="cardInner">
+    <a href="#">
+        <img class="rounded-t-lg" src="/assets/product7-8yqOARKC.jpg" alt="" />
+    </a>
+    <div class="p-4">
+        <a href="#">
+            <h5 class="productName">STUDENT COMPOUND MICROSCOPE </h5>
+        </a>
+        <div class="description">FIXED CONDENSER
+          With fixed bright field condenser & Iris Diaphragm, Heavy metal stand with triple nose piece. Coarse adjustment by rack and Pinion and fine adjustment precision grade slow motion arrangement in a Thermocol Box.
+          <br><br>
+
+          <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+              <li>
+                <strong>Total Magnification:</strong>  675x
+              </li>
+              <li>
+                <strong>Eye-Pieces:</strong> H 10x, 
+              </li>
+              <li>
+                <strong>H 15x Objectives:</strong> 10x , 45x (SL)
+              </li>
+          </ul>
+        </div>
+          
+          <button type="button"  class="read-more" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal">
+            Read more
+            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+        </button>
+    </div>
+</div>
+  <div class="cardInner">
+    <a href="#">
+        <img class="rounded-t-lg" src="/assets/product7-8yqOARKC.jpg" alt="" />
+    </a>
+    <div class="p-4">
+        <a href="#">
+            <h5 class="productName">STUDENT COMPOUND MICROSCOPE </h5>
+        </a>
+        <div class="description">FIXED CONDENSER
+          With fixed bright field condenser & Iris Diaphragm, Heavy metal stand with triple nose piece. Coarse adjustment by rack and Pinion and fine adjustment precision grade slow motion arrangement in a Thermocol Box.<br><br>
+
+          <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+              <li>
+                <strong>Total Magnification:</strong>  675x
+              </li>
+              <li>
+                <strong>Eye-Pieces:</strong> H 10x, 
+              </li>
+              <li>
+                <strong>H 15x Objectives:</strong> 10x , 45x (SL)
+              </li>
+          </ul>
+        </div>
+          
+          <button type="button"  class="read-more" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal">
+            Read more
+            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+        </button>
+    </div>
+</div>
+  
+
+  </div>
+</div>
+
+<!-- =================end products====================== -->
+
+<div id="${blockId}">dh</div>
+<div class="list">j</div>
+<div class="list">j</div>
+<div class="list">j</div>
+
+
+
+
+<footer class="bg-gray-900">
+  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <div class="md:flex md:justify-between">
+        <div class="mb-6 md:mb-0">
+            <a href="https://flowbite.com/" class="flex items-center">
+              <img src="/assets/logo-IUfBBmM2.svg" class="h-8 mr-2 invert" alt="RESEARCH SCIENTIFIC INDIA" />
+                <span class="self-center text-1xl font-semibold whitespace-nowrap text-white">RESEARCH SCIENTIFIC INDIA</span>
+            </a>
+        </div>
+        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-200 uppercase">Follow us</h2>
+                <ul class="text-gray-400  font-medium">
+                    <li class="mb-4">
+                        <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Twitter</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-200 uppercase">Legal</h2>
+                <ul class="text-gray-400 font-medium">
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr class="my-6  sm:mx-auto border-gray-700 lg:my-8" />
+    <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-gray-400 sm:text-center">© 2023 RESEARCH SCIENTIFIC INDIA . All Rights Reserved.
+        </span>
+        <div class="flex mt-4 sm:justify-center sm:mt-0">
+            <a href="#" class="text-gray-400">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                      <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                  </svg>
+                <span class="sr-only">Facebook page</span>
+            </a>
+            <a href="#" class="text-gray-400  ms-5">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
+                  <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
+              </svg>
+                <span class="sr-only">Twitter page</span>
+            </a>
+
+        </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<div id="authentication-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+  <div class="relative p-4 w-full max-w-2xl max-h-full">
+      <!-- Modal content -->
+      <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+          <!-- Modal header -->
+          <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                  Terms of Service
+              </h3>
+              <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="authentication-modal">
+                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+              </button>
+          </div>
+          <!-- Modal body -->
+          <div class="p-4 md:p-5 space-y-4">
+              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+
+                  
+      <div id="block2">
+        <!-- Content will be dynamically updated here -->
+      </div>
+
+
+                  With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
+              </p>
+              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                  The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
+              </p>
+          </div>
+          <!-- Modal footer -->
+          <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+              <button data-modal-hide="authentication-modal" type="button" class="read-more">I Interested</button>
+              <button data-modal-hide="authentication-modal" type="button" onclick="resetId()" class="reset">Not Interested</button>
+          </div>
+      </div>
+  </div>
+</div>
 </body>
 </html>
