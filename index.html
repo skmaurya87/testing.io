@@ -7,8 +7,9 @@
     <title>Research Scientific India</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
     <script src="script.js"></script>
-  <link rel="stylesheet" crossorigin href="assets/index-d_m-9j43.css">
+  <link rel="stylesheet" crossorigin href="assets/index-cg1NoL_6.css">
 </head>
 
 <body class="h-[100vh] bg-white dark:bg-gray-900 ">
@@ -21,17 +22,15 @@
             <div class="flex flex-wrap items-center">
                 <span class="max-sm:hidden text-2xl font-bold text-blue-600 dark:text-white">RESEARCH SCIENTIFIC
                     INDIA</span>
-                <button id="themeButton" onclick="toggleTheme()"
-                    data-tooltip-target="default-modal-example-toggle-dark-mode-tooltip" type="button"
-                    data-toggle-dark="light"
-                    class="flex items-center px-4 py-2 mx-3 justify-center text-xs font-medium text-gray-700 bg-white border border-gray-200 rounded-lg toggle-dark-state-example hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 dark:bg-gray-800 focus:outline-none dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Dark</button>
-
+                    <button id="themeButton" onclick="toggleTheme()" class="toggle-btn">
+                        <i  id="themeIcon" class="fa-sun"></i>
+                      </button>
             </div>
         </div>
     </nav>
 
 
-    <section class="bg-stone-100 dark:bg-gray-800">
+    <section class="bg-stone-150 dark:bg-gray-800">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <div class="flex flex-wrap ">
                 <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
@@ -39,21 +38,18 @@
                         class="relative z-40 object-cover w-full h-96 rounded-3xl">
                 </div>
                 <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0 ">
-                    <h2 class="mb-4 text-4xl font-semibold text-blue-500 dark:text-gray-300">
-                        About Us
+                    <h2 class="mb-4 text-4xl font-bold dark:text-white">
+                        ABOUT US
                     </h2>
-                    <p class="mb-10 text-base leading-7 text-gray-500 dark:text-gray-400">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor
-                        incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniamLorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor
-                        incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniamLorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor
-                    </p>
+                    <div class="mb-10 text-base leading-7 text-gray-500 dark:text-gray-400">
+                        <p>Research Scientific India supplies a diverse range of high-quality laboratory, medical, metallurgical, and industrial products to customers in India and globally. Their clientele includes distributors, universities, hospital trusts, independent laboratory groups, schools, and manufacturing and automobile industries.</p>
+
+                        <p>Our goal is to offer top-quality products at competitive prices while delivering professional customer care. This is exemplified by our extensive selection of affordable microscopes and industrial products designed for various popular applications.
+                        </p>
+                        
+                        <p>We provide models of microscopes tailored to both basic educational needs and advanced research and clinical tasks, ensuring there's an option to suit every requirement and budget.</p>
+                        
+                    </div>
                     <!-- <a href="#"
                         class="px-4 py-3 text-blue-700 transition-all transform border border-blue-500 rounded-3xl hover:bg-blue-600 dark:border-blue-400 dark:hover:bg-blue-500 dark:hover:text-gray-100 dark:hover:border-blue-500 dark:text-blue-400 hover:text-gray-100">
                         Discover more
@@ -62,6 +58,9 @@
             </div>
         </div>
     </section>
+
+
+    <div w3-include-html="content.html"></div>
 
     <!-- <section class="bg-stone-100 dark:bg-gray-800">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -151,10 +150,8 @@
             </div>
         </div>
     </section> -->
-
-
     <!-- ===================product list start ======================== -->
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4" id="productContainer">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6" id="products">
         
             <div class="cardInner" id="list8">
@@ -837,218 +834,11 @@
         </div>
     </div>
 
+<!-- 
+    <button id="loadMoreBtn" onclick="loadMore()">Load More</button>   -->
     <!-- =================end products====================== -->
 
-    <section class="flex items-center bg-gray-100 dark:bg-gray-800">
-        <div class="p-4 mx-auto max-w-7xl">
-            <div class="text-center mb-14">
-                <h1 class="mb-4 text-3xl font-bold dark:text-white"> Testimonials </h1>
-                <p class="max-w-xl mx-auto text-gray-500">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quae quam nostrum harum non in at
-                    eaque quibusdam eum ratione.</p>
-            </div>
-            <div class="flex ">
-                <div class="grid grid-cols-1 gap-4 lg:gap-8 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                    <div>
-                        <div class="flex items-center justify-center mb-5 gap-x-4">
-                            <div class="relative w-24 h-24 rounded-full">
-                                <span
-                                    class="absolute bottom-0 right-0 inline-block p-1 text-xs text-white bg-blue-500 rounded-full ">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                        class="bi bi-quote" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z" />
-                                    </svg>
-                                </span>
-                                <img class="object-cover w-full h-full rounded-full"
-                                    src="https://i.postimg.cc/gk8KvyTN/ehsan-ahmadi-vs-Wy6nchc-Os-unsplash.jpg" alt="">
-                            </div>
-                            <div class="info">
-                                <h2 class="text-lg font-bold text-black dark:text-white">
-                                    Hugh Denims
-                                </h2>
-                                <span class="block text-xs font-semibold text-blue-500 uppercase dark:text-blue-300">
-                                    Game Developer
-                                </span>
-                                <span class="flex mt-2 text-orange-500 gap-x-0.5">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                        class="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                        class="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                        class="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                        class="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                        class="bi bi-star" viewBox="0 0 16 16">
-                                        <path
-                                            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="relative mb-8 bg-white rounded shadow dark:bg-gray-700">
-                            <div class="absolute inline-block overflow-hidden -translate-x-1/2 w-7 -top-4 left-1/2">
-                                <div
-                                    class="w-4 h-4 origin-bottom-left transform rotate-45 bg-white dark:bg-gray-700 drop-shadow">
-                                </div>
-                            </div>
-                            <div class="relative z-20 p-8">
-                                <p class="text-base leading-7 text-gray-400">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quidem ea
-                                    necessitatibus
-                                    voluptates aliquid rerum officiis explicabo laborum molestiae id
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex items-center justify-center mb-5 gap-x-4">
-                            <div class="relative w-24 h-24 rounded-full">
-                                <span
-                                    class="absolute bottom-0 right-0 inline-block p-1 text-xs text-white bg-blue-500 rounded-full ">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                        class="bi bi-quote" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z" />
-                                    </svg>
-                                </span>
-                                <img class="object-cover w-full h-full rounded-full" src="
-                                    https://i.postimg.cc/KvrSzTxg/alexandru-zdrobau-dj-RG1v-B1pw-unsplash.jpg" alt="">
-                            </div>
-                            <div class="info">
-                                <h2 class="text-lg font-bold text-black dark:text-white">
-                                    Alexander Waters
-                                </h2>
-                                <span class="block text-xs font-semibold text-blue-500 uppercase dark:text-blue-300">
-                                    CEO
-                                </span>
-                                <span class="flex mt-2 text-orange-500 gap-x-0.5">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                        class="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                        class="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                        class="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                        class="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                        class="bi bi-star" viewBox="0 0 16 16">
-                                        <path
-                                            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="relative mb-8 bg-white rounded shadow dark:bg-gray-700">
-                            <div class="absolute inline-block overflow-hidden -translate-x-1/2 w-7 -top-4 left-1/2">
-                                <div
-                                    class="w-4 h-4 origin-bottom-left transform rotate-45 bg-white dark:bg-gray-700 drop-shadow">
-                                </div>
-                            </div>
-                            <div class="relative z-20 p-8">
-                                <p class="text-base leading-7 text-gray-400">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quidem ea
-                                    necessitatibus
-                                    voluptates aliquid rerum officiis explicabo laborum molestiae id
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex items-center justify-center mb-5 gap-x-4">
-                            <div class="relative w-24 h-24 rounded-full">
-                                <span
-                                    class="absolute bottom-0 right-0 inline-block p-1 text-xs text-white bg-blue-500 rounded-full ">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                        class="bi bi-quote" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z" />
-                                    </svg>
-                                </span>
-                                <img class="object-cover w-full h-full rounded-full"
-                                    src="https://i.postimg.cc/wj9DLCJj/yunming-wang-G9f4-Enb8-XVM-unsplash.jpg" alt="">
-                            </div>
-                            <div class="info">
-                                <h2 class="text-lg font-bold text-black dark:text-white">
-                                    Dustin Heathens
-                                </h2>
-                                <span class="block text-xs font-semibold text-blue-500 uppercase dark:text-blue-300">
-                                    Mind Controller
-                                </span>
-                                <span class="flex mt-2 text-orange-500 gap-x-0.5">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                        class="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                        class="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                        class="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                        class="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                        class="bi bi-star" viewBox="0 0 16 16">
-                                        <path
-                                            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="relative mb-8 bg-white rounded shadow dark:bg-gray-700">
-                            <div class="absolute inline-block overflow-hidden -translate-x-1/2 w-7 -top-4 left-1/2">
-                                <div
-                                    class="w-4 h-4 origin-bottom-left transform rotate-45 bg-white dark:bg-gray-700 drop-shadow">
-                                </div>
-                            </div>
-                            <div class="relative z-20 p-8">
-                                <p class="text-base leading-7 text-gray-400">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quidem ea
-                                    necessitatibus
-                                    voluptates aliquid rerum officiis explicabo laborum molestiae id
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <div w3-include-html="contactUs.html"></div>
     <!-- ============================Testimonials========================== -->
 
 
@@ -1067,10 +857,10 @@
                         <h2 class="mb-6 text-sm font-semibold text-gray-200 uppercase">Follow us</h2>
                         <ul class="text-gray-400  font-medium">
                             <li class="mb-4">
-                                <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Facebook</a>
+                                <a href="https://www.facebook.com/people/Research-scientific-india/61556345370480/" class="hover:underline ">Facebook</a>
                             </li>
                             <li>
-                                <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Twitter</a>
+                                <a href="https://www.instagram.com/research_scientific_india88/" class="hover:underline">Instagram</a>
                             </li>
                         </ul>
                     </div>
@@ -1180,5 +970,9 @@
         </div>
     </div>
 </body>
+
+<script>
+    includeHTML();
+</script>
 
 </html>
